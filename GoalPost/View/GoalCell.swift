@@ -15,6 +15,7 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var goalDescriptionLabel: UILabel!
     @IBOutlet weak var goalTypeLabel: UILabel!
     @IBOutlet weak var goalProgressLabel: UILabel!
+    @IBOutlet weak var completionView: UIView!
     
     //MARK: - Methods
     /***************************************************************/
@@ -22,6 +23,12 @@ class GoalCell: UITableViewCell {
         goalDescriptionLabel.text = goal.goalDescription
         goalTypeLabel.text = goal.goalType
         goalProgressLabel.text = String(goal.goalProgress)
+        
+        if goal.goalProgress == goal.goalCompletionValue {
+            self.completionView.isHidden = false
+        } else {
+            self.completionView.isHidden = true
+        }
     }
 
 }
