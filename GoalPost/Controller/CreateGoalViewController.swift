@@ -21,12 +21,19 @@ class CreateGoalViewController: UIViewController, UITextViewDelegate {
     /***************************************************************/
     var goalType: GoalType = .shortTerm
     
+    //MARK: - Methods
+    /***************************************************************/
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nextButton.bindToKeyboard()
         shortTermButton.setSelectedColor()
         longTermButton.setDeselectedColor()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     //MARK: - Actions
@@ -54,11 +61,6 @@ class CreateGoalViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func backButtonPressed(_ sender: Any) {
         dismissDetail()
-    }
-    
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        goalTextView.text = ""
-        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
 }

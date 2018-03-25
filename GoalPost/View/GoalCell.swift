@@ -18,10 +18,10 @@ class GoalCell: UITableViewCell {
     
     //MARK: - Methods
     /***************************************************************/
-    func configureCell(description: String, type: GoalType, goalProgress: Int) {
-        goalDescriptionLabel.text = description
-        goalTypeLabel.text = type.rawValue
-        goalProgressLabel.text = String(goalProgress)
+    func configureCell(goal: Goal) {
+        goalDescriptionLabel.text = goal.goalDescription
+        goalTypeLabel.text = goal.goalType
+        goalProgressLabel.text = String(goal.goalProgress)
     }
 
 }
