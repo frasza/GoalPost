@@ -19,6 +19,7 @@
 		3A36833B2067AFD90051EAD1 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36833A2067AFD90051EAD1 /* UIViewControllerExt.swift */; };
 		3A36833D2067B6880051EAD1 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36833C2067B6880051EAD1 /* UIViewExt.swift */; };
 		3A36833F2067B93B0051EAD1 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36833E2067B93B0051EAD1 /* UIButtonExt.swift */; };
+		3A3683412067BBF30051EAD1 /* FinishGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3683402067BBF30051EAD1 /* FinishGoalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3A36833A2067AFD90051EAD1 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		3A36833C2067B6880051EAD1 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		3A36833E2067B93B0051EAD1 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		3A3683402067BBF30051EAD1 /* FinishGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				3A36831C206798A20051EAD1 /* GoalsViewController.swift */,
 				3A3683382067AED50051EAD1 /* CreateGoalViewController.swift */,
+				3A3683402067BBF30051EAD1 /* FinishGoalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				3A3683352067A0060051EAD1 /* GoalCell.swift in Sources */,
 				3A3683392067AED50051EAD1 /* CreateGoalViewController.swift in Sources */,
+				3A3683412067BBF30051EAD1 /* FinishGoalViewController.swift in Sources */,
 				3A3683372067AA9C0051EAD1 /* GoalType.swift in Sources */,
 				3A36831D206798A20051EAD1 /* GoalsViewController.swift in Sources */,
 				3A36833D2067B6880051EAD1 /* UIViewExt.swift in Sources */,

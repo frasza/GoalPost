@@ -8,11 +8,11 @@
 
 import UIKit
 
-class CreateGoalViewController: UIViewController {
+class CreateGoalViewController: UIViewController, UITextViewDelegate {
     
     //MARK: - Outlets
     /***************************************************************/
-    @IBOutlet weak var goalTextField: UITextView!
+    @IBOutlet weak var goalTextView: UITextView!
     @IBOutlet weak var shortTermButton: UIButton!
     @IBOutlet weak var longTermButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -32,7 +32,12 @@ class CreateGoalViewController: UIViewController {
     //MARK: - Actions
     /***************************************************************/
     @IBAction func nextButtonPressed(_ sender: Any) {
-        
+        if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
+            guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalViewController") as? FinishGoalViewController else { return }
+            finishGoalVC.initData(description: goalTextView.text, type: goalType)
+            
+            presentDetail(finishGoalVC)
+        }
     }
     
     @IBAction func shortTermButtonPressed(_ sender: Any) {
@@ -49,6 +54,11 @@ class CreateGoalViewController: UIViewController {
     
     @IBAction func backButtonPressed(_ sender: Any) {
         dismissDetail()
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
 }
