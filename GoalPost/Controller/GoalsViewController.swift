@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class GoalsViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class GoalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.isHidden = false
     }
     
     //MARK: - Actions
@@ -33,11 +35,15 @@ class GoalsViewController: UIViewController {
 extension GoalsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell", for: indexPath) as? GoalCell else { return UITableViewCell() }
+        
+        cell.configureCell(description: "Eat salad twice a week", type: .shortTerm, goalProgress: 2)
+        
+        return cell
     }
     
 }
