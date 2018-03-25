@@ -23,7 +23,7 @@
         <!--Goals View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GoalsViewController" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GoalViewController" id="BYZ-38-t0r" customClass="GoalsViewController" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,6 @@
                                         <state key="normal" image="addGoal"/>
                                         <connections>
                                             <action selector="addGoalButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAd-GF-rAQ"/>
-                                            <segue destination="XED-i9-Xc3" kind="presentation" id="hDY-Fk-pV0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -204,7 +203,7 @@
         <!--Create Goal View Controller-->
         <scene sceneID="dyf-U6-CyZ">
             <objects>
-                <viewController id="XED-i9-Xc3" customClass="CreateGoalViewController" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateGoalViewController" id="XED-i9-Xc3" customClass="CreateGoalViewController" customModule="GoalPost" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o3W-nL-AyA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
