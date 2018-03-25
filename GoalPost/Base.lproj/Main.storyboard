@@ -378,6 +378,9 @@
                                             <constraint firstAttribute="width" constant="30" id="SXx-9U-VQ2"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="ZLq-Ib-gJv" eventType="touchUpInside" id="TIb-g2-ija"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
