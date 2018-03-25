@@ -30,16 +30,19 @@ class GoalsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         fetch { (success) in
             if success {
                 if goals.count > 0 {
                     tableView.isHidden = false
-                    tableView.reloadData()
+                    
                 } else {
                     tableView.isHidden = true
                 }
             }
         }
+        
+        tableView.reloadData()
     }
     
     //MARK: - Actions
